@@ -10,6 +10,11 @@ spec:
       image: fredyball/servicio-a:latest
       ports:
         - containerPort: 3001
+  tolerations:
+    - key: "environment"
+      operator: "Equal"
+      value: "production"
+      effect: "NoSchedule"
 
 ---
 
