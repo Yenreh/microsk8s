@@ -82,9 +82,9 @@ const resolvers = {
         },
         serviceg: async () => {
             try {
-                const response = await axios.get('http://servicio-g-service/dulces');
+                const response = await axios.get('http://servicio-g-service/frutas');
                 const data = response.data;
-                return  [...data.dulces];
+                return  [...data.frutas];
             } catch (err) {
                 console.error("Error al obtener datos de service g", err);
                 return "Error al obtener datos de service g";
