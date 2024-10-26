@@ -1,4 +1,11 @@
-commnads to troubleshoot
- Con el pod netshoot desplegado
- kubectl exec netshoot-pod -- nslookup servicio-b-service
- kubectl exec netshoot-pod -- curl servicio-b-service/servicio-b
+# Excecute
+
+```bash
+sh run.sh
+```
+
+# Delete pods and services
+
+```bash
+sh delete.sh
+```
