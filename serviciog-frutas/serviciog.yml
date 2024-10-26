@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servicio-g-pod
+  labels:
+    app: servicio-g
+spec:
+  containers:
+    - name: servicio-g-container
+      image: ervincaravaliibarra/frutas:latest
+      ports:
+        - containerPort: 4080
+  tolerations:
+    - key: "environment"
+      operator: "Equal"
+      value: "production"
+      effect: "NoSchedule"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicio-g-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 4080
+      protocol: TCP
+  selector:
+    app: servicio-g

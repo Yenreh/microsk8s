@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servicio-h-pod
+  labels:
+    app: servicio-h
+spec:
+  containers:
+    - name: servicio-h-container
+      image: ervincaravaliibarra/quesos:latest
+      ports:
+        - containerPort: 9000
+  tolerations:
+    - key: "environment"
+      operator: "Equal"
+      value: "production"
+      effect: "NoSchedule"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicio-h-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 9000
+      protocol: TCP
+  selector:
+    app: servicio-h
