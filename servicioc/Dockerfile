@@ -9,6 +9,6 @@ COPY . .
 
 
 # Expone el puerto en el que se ejecutará el servicio
-EXPOSE 3001
+EXPOSE 3003
 
 CMD ["python", "app.py"]

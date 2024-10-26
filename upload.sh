@@ -1,8 +1,8 @@
 #!/bin/bash
 
-docker push yenreh/apigw:lastest
-docker push yenreh/authservice:lastest
-docker push yenreh/servicio-a:lastest
-docker push yenreh/servicio-b:lastest
-docker push yenreh/servicio-c:lastest
+docker push yenreh/apigw
+docker push yenreh/authservice
+docker push yenreh/servicio-a
+docker push yenreh/servicio-b
+docker push yenreh/servicio-c
 
