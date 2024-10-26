@@ -50,6 +50,10 @@ const resolvers = {
             try {
                 const response = await axios.get('http://servicio-d-service/bebidas');
                 const data = response.data;
+                console.log("response")
+                console.log(response)
+                console.log("data")
+                console.log(data)
                 return  [...data.bebidas];
             } catch (err) {
                 console.error("Error al obtener datos de service d", err);
