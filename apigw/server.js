@@ -54,7 +54,7 @@ const resolvers = {
                 console.log(response)
                 console.log("data")
                 console.log(data)
-                return  [...data.bebidas];
+                return  data.json();
             } catch (err) {
                 console.error("Error al obtener datos de service d", err);
                 return "Error al obtener datos de service d";
