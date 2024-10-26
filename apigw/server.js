@@ -14,6 +14,7 @@ const resolvers = {
     service1: async () => {
         try {
             const response = await axios.get('http://servicio-a-service/servicio-a');
+            console.log(response)
             const data = response.data;
             return data.message;
         } catch (err) {
@@ -24,6 +25,7 @@ const resolvers = {
   service2: async () => {
       try {
           const response = await axios.get('http://servicio-b-service/servicio-b');
+          console.log(response)
           const data = response.data;
           return data.message;
       } catch (err) {
@@ -33,7 +35,8 @@ const resolvers = {
   },
       service3: async () => {
           try {
-              const response = await axios.get('http://servicio-b-service/servicio-b');
+              const response = await axios.get('http://servicio-c-service/servicio-c');
+              console.log(response)
               const data = response.data;
               return data.message;
           } catch (err) {
