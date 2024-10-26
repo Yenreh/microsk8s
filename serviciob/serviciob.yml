@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: servicio-b-container
-      image: fredyball/servicio-b:latest
+      image: yenreh/servicio-b:latest
       ports:
         - containerPort: 3002
   tolerations:
