@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servicio-c-pod
+  labels:
+    app: servicio-c
+spec:
+  containers:
+    - name: servicio-c-container
+      image: yenreh/servicio-c:latest
+      ports:
+        - containerPort: 3001
+  tolerations:
+    - key: "environment"
+      operator: "Equal"
+      value: "production"
+      effect: "NoSchedule"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicio-c-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 3001
+      protocol: TCP
+  selector:
+    app: servicio-c
