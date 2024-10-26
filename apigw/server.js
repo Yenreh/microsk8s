@@ -14,23 +14,21 @@ const resolvers = {
     service1: async () => {
         try {
             const response = await axios.get('http://servicio-a-service/servicio-a');
-            console.log(response)
             const data = response.data;
             return data.message;
         } catch (err) {
-            console.error("Error al obtener datos de service 1", err);
-            return "Error al obtener datos de service 1";
+            console.error("Error al obtener datos de service a", err);
+            return "Error al obtener datos de service a";
         }
     },
   service2: async () => {
       try {
           const response = await axios.get('http://servicio-b-service/servicio-b');
-          console.log(response)
           const data = response.data;
           return data.message;
       } catch (err) {
-          console.error("Error al obtener datos de service 2", err);
-          return "Error al obtener datos de service 2";
+          console.error("Error al obtener datos de service b", err);
+          return "Error al obtener datos de service b";
       }
   },
       service3: async () => {
@@ -40,8 +38,8 @@ const resolvers = {
               const data = response.data;
               return data.message;
           } catch (err) {
-              console.error("Error al obtener datos de service 3", err);
-              return "Error al obtener datos de service 3";
+              console.error("Error al obtener datos de service c", err);
+              return "Error al obtener datos de service c";
           }
       },
   },
