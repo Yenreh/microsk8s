@@ -3,9 +3,14 @@ const axios = require('axios');
 
 const typeDefs = `
   type Query {
-    service1: String
-    service2: String
-    service3: String
+    servicea: String
+    serviceb: String
+    servicec: String
+    serviced: String
+    servicee: String
+    servicef: String
+    serviceg: String
+    serviceh: String
   }
 `;
 
