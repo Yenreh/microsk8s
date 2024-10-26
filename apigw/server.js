@@ -25,6 +25,8 @@ const resolvers = {
       try {
           const response = await axios.get('http://servicio-b-service/servicio-b');
           const data = response.data;
+          console.log("This is the data", data)
+          console.log("This is the message", data.message)
           return data.message;
       } catch (err) {
           console.error("Error al obtener datos de service b", err);
