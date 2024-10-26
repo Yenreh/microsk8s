@@ -6,11 +6,11 @@ const typeDefs = `
     servicea: String
     serviceb: String
     servicec: String
-    serviced: String
-    servicee: String
-    servicef: String
-    serviceg: String
-    serviceh: String
+    serviced: [String]
+    servicee: [String]
+    servicef: [String]
+    serviceg: [String]
+    serviceh: [String]
   }
 `;
 
@@ -54,7 +54,7 @@ const resolvers = {
                 console.log(response)
                 console.log("data")
                 console.log(data)
-                return  data.json();
+                return  [...data.bebidas];
             } catch (err) {
                 console.error("Error al obtener datos de service d", err);
                 return "Error al obtener datos de service d";
