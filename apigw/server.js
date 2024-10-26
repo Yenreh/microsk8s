@@ -51,7 +51,7 @@ const resolvers = {
         },
         serviced: async () => {
             try {
-                const response = await axios.get('http://servicio-d-service/servicio-d');
+                const response = await axios.get('http://servicio-d-service/bebidas');
                 const data = response.data;
                 return data.bebidas;
             } catch (err) {
@@ -61,7 +61,7 @@ const resolvers = {
         },
         servicee: async () => {
             try {
-                const response = await axios.get('http://servicio-e-service/servicio-e');
+                const response = await axios.get('http://servicio-e-service/cereales');
                 const data = response.data;
                 return data.cereales;
             } catch (err) {
@@ -71,7 +71,7 @@ const resolvers = {
         },
         servicef: async () => {
             try {
-                const response = await axios.get('http://servicio-f-service/servicio-f');
+                const response = await axios.get('http://servicio-f-service/dulces');
                 const data = response.data;
                 return data.dulces;
             } catch (err) {
@@ -81,7 +81,7 @@ const resolvers = {
         },
         serviceg: async () => {
             try {
-                const response = await axios.get('http://servicio-g-service/servicio-g');
+                const response = await axios.get('http://servicio-g-service/dulces');
                 const data = response.data;
                 return data.frutas;
             } catch (err) {
@@ -91,7 +91,7 @@ const resolvers = {
         },
         serviceh: async () => {
             try {
-                const response = await axios.get('http://servicio-h-service/servicio-h');
+                const response = await axios.get('http://servicio-h-service/quesos');
                 const data = response.data;
                 return data.quesos;
             } catch (err) {
