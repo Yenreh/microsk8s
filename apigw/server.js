@@ -49,7 +49,8 @@ const resolvers = {
         serviced: async () => {
             try {
                 const response = await axios.get('http://servicio-d-service/bebidas');
-                return response.data;
+                const data = response.data;
+                return  [...data.bebidas];
             } catch (err) {
                 console.error("Error al obtener datos de service d", err);
                 return "Error al obtener datos de service d";
@@ -58,7 +59,8 @@ const resolvers = {
         servicee: async () => {
             try {
                 const response = await axios.get('http://servicio-e-service/cereales');
-                return response.data;
+                const data = response.data;
+                return  [...data.cereales];
             } catch (err) {
                 console.error("Error al obtener datos de service e", err);
                 return "Error al obtener datos de service e";
@@ -67,7 +69,8 @@ const resolvers = {
         servicef: async () => {
             try {
                 const response = await axios.get('http://servicio-f-service/dulces');
-                return response.data;
+                const data = response.data;
+                return  [...data.dulces];
             } catch (err) {
                 console.error("Error al obtener datos de service f", err);
                 return "Error al obtener datos de service f";
@@ -76,7 +79,8 @@ const resolvers = {
         serviceg: async () => {
             try {
                 const response = await axios.get('http://servicio-g-service/dulces');
-                return response.data;
+                const data = response.data;
+                return  [...data.dulces];
             } catch (err) {
                 console.error("Error al obtener datos de service g", err);
                 return "Error al obtener datos de service g";
@@ -85,7 +89,8 @@ const resolvers = {
         serviceh: async () => {
             try {
                 const response = await axios.get('http://servicio-h-service/quesos');
-                return response.data;
+                const data = response.data;
+                return  [...data.quesos];
             } catch (err) {
                 console.error("Error al obtener datos de service h", err);
                 return "Error al obtener datos de service h";
