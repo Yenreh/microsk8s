@@ -41,7 +41,6 @@ const resolvers = {
         servicec: async () => {
             try {
                 const response = await axios.get('http://servicio-c-service/servicio-c');
-                console.log(response)
                 const data = response.data;
                 return data.message;
             } catch (err) {
@@ -53,7 +52,9 @@ const resolvers = {
             try {
                 const response = await axios.get('http://servicio-d-service/bebidas');
                 const data = response.data;
-                return data.bebidas;
+                console.log("This is the data", data)
+                console.log("This is the message", data.message)
+                return data.message;
             } catch (err) {
                 console.error("Error al obtener datos de service d", err);
                 return "Error al obtener datos de service d";
@@ -63,7 +64,9 @@ const resolvers = {
             try {
                 const response = await axios.get('http://servicio-e-service/cereales');
                 const data = response.data;
-                return data.cereales;
+                console.log("This is the data", data)
+                console.log("This is the message", data.message)
+                return data.message;
             } catch (err) {
                 console.error("Error al obtener datos de service e", err);
                 return "Error al obtener datos de service e";
@@ -73,7 +76,9 @@ const resolvers = {
             try {
                 const response = await axios.get('http://servicio-f-service/dulces');
                 const data = response.data;
-                return data.dulces;
+                console.log("This is the data", data)
+                console.log("This is the message", data.message)
+                return data.message;
             } catch (err) {
                 console.error("Error al obtener datos de service f", err);
                 return "Error al obtener datos de service f";
@@ -83,7 +88,9 @@ const resolvers = {
             try {
                 const response = await axios.get('http://servicio-g-service/dulces');
                 const data = response.data;
-                return data.frutas;
+                console.log("This is the data", data)
+                console.log("This is the message", data.message)
+                return data.message;
             } catch (err) {
                 console.error("Error al obtener datos de service g", err);
                 return "Error al obtener datos de service g";
@@ -93,7 +100,9 @@ const resolvers = {
             try {
                 const response = await axios.get('http://servicio-h-service/quesos');
                 const data = response.data;
-                return data.quesos;
+                console.log("This is the data", data)
+                console.log("This is the message", data.message)
+                return data.message;
             } catch (err) {
                 console.error("Error al obtener datos de service h", err);
                 return "Error al obtener datos de service h";
